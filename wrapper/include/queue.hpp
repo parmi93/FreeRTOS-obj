@@ -165,8 +165,6 @@ namespace freertos_obj
 			return uxQueueSpacesAvailable(freertos_push_queue);
 		}
 		
-		friend class QueueSetFreeRtos;
-		
 		~Queue()
 		{
 			vQueueDelete(freertos_push_queue);
