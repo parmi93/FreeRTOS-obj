@@ -8,7 +8,7 @@ I only developed some parts of this wrapper, the ones I needed for my job.
 I will publish soon the wrapper for the "Queue Set" API.
 
 # How to use
-### How to create a task?
+### How to create a task
 You can create a task in two different ways.
 
 - With a lambda callback:
@@ -65,7 +65,7 @@ myTask.myMethod();
 myTask.param1 = 100;
 
 ```
-### How to use a queue?
+### How to use a queue
 Note: objects/classes must have a public constructor without parameters
 ```cpp
 using namespace freertos_obj;
@@ -82,7 +82,7 @@ queue_cls.Push(myClass(), 0);
 myClass my_class;
 queue_cls.Pop(my_class, 0);
 ```
-## An advice
+## Notes
 When using objects, allocation functions (malloc, new, new[], delete, delete[]) are often called by the std libray. If you use these objects within FreeRTOS tasks this could be a problem, as a concurrent access to the allocation functions can occur and the memory pool may become corrupted.
 
 So I advise you to consider adding the following hooks in your project:
