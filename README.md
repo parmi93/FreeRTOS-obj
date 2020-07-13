@@ -84,11 +84,11 @@ So I advise you to consider adding the following hooks in your software
 ```cpp
 extern "C" void __malloc_lock(struct _reent *REENT)
 {
-	TaskFreeRtos<>::SuspendAll();
+	freertos_obj::Task<>::SuspendAll();
 }
 
 extern "C" void __malloc_unlock(struct _reent *REENT)
 {
-	TaskFreeRtos<>::ResumeAll();
+	freertos_obj::Task<>::ResumeAll();
 }
 ```
