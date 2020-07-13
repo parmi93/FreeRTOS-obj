@@ -1,5 +1,5 @@
 # FreeRTOS-obj
-FreeRTOS strictly object-oriented
+A sctrictly object-oriented FreeRTOS
 
 When I started developing in C++ I felt the need to use a wrapper for FreeRTOS, a wrapper that would allow me to avoid using pointers to store objects in FreeRTOS queues.
 
