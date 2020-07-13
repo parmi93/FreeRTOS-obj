@@ -11,7 +11,7 @@ I will publish soon the wrapper for the "Queue Set" API.
 ### How to create a task?
 You can create a task in two different ways.
 
-- With a lambda callback::
+- With a lambda callback:
 ```cpp
 using namespace freertos_obj;
 
@@ -38,6 +38,7 @@ public:
 		, param3(param3)
 	{ }
 	
+	//You must implement the Run() method
 	bool Run()
 	{
 		return true;  //return true to delete this task, otherwise return false to run this method again
