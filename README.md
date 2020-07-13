@@ -77,3 +77,18 @@ auto queue_cls = Queue<myClass>(5);       //size 5
 queue_str.Push("hello word", 0);
 queue_cls.Push(myClass(), 0);
 ```
+# A suggestion
+When using objects, allocation functions (malloc, new, new[], delete, delete[]) are often called by the std libray. If you use these objects within FreeRTOS tasks this could be a problem, as a concurrent access to the allocation functions can occur and the memory pool may become corrupted.
+
+So I advise you to consider adding the following hooks in your software
+```cpp
+extern "C" void __malloc_lock(struct _reent *REENT)
+{
+	TaskFreeRtos<>::SuspendAll();
+}
+
+extern "C" void __malloc_unlock(struct _reent *REENT)
+{
+	TaskFreeRtos<>::ResumeAll();
+}
+```
