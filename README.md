@@ -77,6 +77,9 @@ auto queue_cls = Queue<myClass>(5);       //size 5
 
 queue_str.Push("hello word", 0);
 queue_cls.Push(myClass(), 0);
+
+auto my_class = myClass();
+queue_cls.Pop(my_class, 0);
 ```
 # A suggestion
 When using objects, allocation functions (malloc, new, new[], delete, delete[]) are often called by the std libray. If you use these objects within FreeRTOS tasks this could be a problem, as a concurrent access to the allocation functions can occur and the memory pool may become corrupted.
