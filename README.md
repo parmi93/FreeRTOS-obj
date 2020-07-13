@@ -79,7 +79,7 @@ auto queue_cls = Queue<myClass>(5);       //size 5
 queue_str.Push("hello word", 0);
 queue_cls.Push(myClass(), 0);
 
-auto my_class = myClass();
+myClass my_class;
 queue_cls.Pop(my_class, 0);
 ```
 ## An advice
