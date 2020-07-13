@@ -56,7 +56,7 @@ public:
 Task<myRunnableClass> myTask("task_name",   //Task name
   512,                                      //Stack Depth
   1,                                        //Priority
-  99,                                       //param1
+  99,                                       //param1	Params for the constructor of the myRunnableClass class
   "hello word",                             //param2
   3.2);                                     //param3
 
