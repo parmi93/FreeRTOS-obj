@@ -1,5 +1,5 @@
 # FreeRTOS-obj
-A sctrictly object-oriented FreeRTOS
+FreeRTOS-obj is a wrapper for FreeRTOS able to make it strictly object-oriented.
 
 When I started developing in C++ I felt the need to use a wrapper for FreeRTOS, a wrapper that would allow me to avoid using pointers to store objects in FreeRTOS queues.
 
