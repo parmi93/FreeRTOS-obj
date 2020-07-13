@@ -66,6 +66,7 @@ myTask.param1 = 100;
 
 ```
 ### How to use a queue?
+Note: objects/classes must have a public constructor without parameters
 ```cpp
 using namespace freertos_obj;
 
